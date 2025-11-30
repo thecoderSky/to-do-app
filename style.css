@@ -1,0 +1,161 @@
+/* Base Styles */
+:root {
+  --primary-50: #fff1f2;
+  --primary-100: #ffe4e6;
+  --primary-200: #fecdd3;
+  --primary-300: #fda4af;
+  --primary-400: #fb7185;
+  --primary-500: #f43f5e;
+  --primary-600: #e11d48;
+  --primary-700: #be123c;
+  --primary-800: #9f1239;
+  --primary-900: #881337;
+
+  --secondary-50: #fdf2f8;
+  --secondary-100: #fce7f3;
+  --secondary-200: #fbcfe8;
+  --secondary-300: #f9a8d4;
+  --secondary-400: #f472b6;
+  --secondary-500: #ec4899;
+  --secondary-600: #db2777;
+  --secondary-700: #be185d;
+  --secondary-800: #9d174d;
+  --secondary-900: #831843;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes checkAnimation {
+  0% { transform: scale(0); }
+  80% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+/* Task Priority Colors */
+.priority-low {
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+.dark .priority-low {
+  background-color: #1e3a8a;
+  color: #bfdbfe;
+}
+
+.priority-medium {
+  background-color: #f0fdf4;
+  color: #15803d;
+}
+.dark .priority-medium {
+  background-color: #14532d;
+  color: #bbf7d0;
+}
+
+.priority-high {
+  background-color: #fef2f2;
+  color: #b91c1c;
+}
+.dark .priority-high {
+  background-color: #7f1d1d;
+  color: #fecaca;
+}
+
+.priority-urgent {
+  background-color: #fff7ed;
+  color: #c2410c;
+}
+.dark .priority-urgent {
+  background-color: #7c2d12;
+  color: #fed7aa;
+}
+
+/* Task Item Border Colors */
+.border-priority-low {
+  border-left-color: #60a5fa;
+}
+.border-priority-medium {
+  border-left-color: #4ade80;
+}
+.border-priority-high {
+  border-left-color: #f87171;
+}
+.border-priority-urgent {
+  border-left-color: #fb923c;
+}
+
+/* Drag and Drop Styles */
+.task-item.drag-over {
+  border: 2px dashed var(--primary-500);
+  background-color: rgba(244, 63, 94, 0.1);
+}
+
+.task-item.being-dragged {
+  opacity: 0.5;
+  transform: scale(0.95);
+}
+
+/* Modal Animation */
+.modal-enter {
+  animation: fadeIn 0.3s forwards;
+}
+
+.modal-content-enter {
+  animation: slideIn 0.3s forwards;
+}
+
+/* Checkbox Animation */
+.checkmark {
+  animation: checkAnimation 0.3s forwards;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .task-modal {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+/* Dark Mode Transition */
+body, .task-item, aside, header {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #4b5563;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
