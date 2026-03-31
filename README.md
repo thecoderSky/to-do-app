@@ -1,4 +1,4 @@
-# to-do-app
+# RosePetal
 # Advanced To-Do List Web Application
 
 A modern, feature-rich task management web application built using HTML, CSS and JavaScript.  
