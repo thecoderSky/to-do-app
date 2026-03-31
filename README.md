@@ -6,7 +6,7 @@ Built as part of my **Web Development Internship at VaultofCodes**, this project
 
 ## 🚀 Live Demo
 
-🌐 modern-ui-todo-app-rosepetal.netlify.app
+🌐 (https://modern-ui-todo-app-rosepetal.netlify.app/)
 
 # 🛠 Tech Stack
 
